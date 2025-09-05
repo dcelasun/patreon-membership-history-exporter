@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Patreon Membership History Exporter",
+  "version": "1.1",
+  "description": "Export your Patreon membership history as CSV",
+  "permissions": [],
+  "host_permissions": ["https://www.patreon.com/*"],
+  "content_scripts": [{
+    "matches": ["https://www.patreon.com/settings/billing"],
+    "js": ["content.js"]
+  }],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "@patreon-membership-history-exporter"
+    }
+  }
+}
